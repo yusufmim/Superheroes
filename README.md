@@ -3,7 +3,7 @@
 ## Description
 This is a Flask-based RESTful API for managing superheroes, their powers, and the relationships between them through hero-powers. The API allows users to retrieve, update, and create records for heroes and powers, with full CRUD functionality for `HeroPower` associations. It includes validations, proper error handling, and an email notification feature when a new hero-power is created. This project was developed as part of the Phase 4 Code Challenge for the Superheroes assignment.
 
-**Owner**: [Your Name]
+**Owner**: [Yussuf Mohamed]
 
 ## Features
 - **Models and Relationships**:
@@ -27,6 +27,6 @@ This is a Flask-based RESTful API for managing superheroes, their powers, and th
 
 ## Setup Instructions
 1. **Clone the Repository**:
-   ```bash
-   git clone <your-private-repo-url>
-   cd superheroes-api
+
+   git clone <https://github.com/yusufmim/Superheroes>
+   cd superheroes-app
