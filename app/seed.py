@@ -1,14 +1,18 @@
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 from app import create_app, db
 from app.models import Hero, Power, HeroPower
 
 def seed_database():
     app = create_app()
     with app.app_context():
-        # Clear existing data
+        
         db.drop_all()
         db.create_all()
 
-        # Seed Heroes
+
         heroes = [
             Hero(name="Kamala Khan", super_name="Ms. Marvel"),
             Hero(name="Doreen Green", super_name="Squirrel Girl"),
@@ -23,7 +27,7 @@ def seed_database():
         ]
         db.session.add_all(heroes)
 
-        # Seed Powers
+
         powers = [
             Power(name="super strength", description="gives the wielder super-human strengths"),
             Power(name="flight", description="gives the wielder the ability to fly through the skies at supersonic speed"),
@@ -32,18 +36,18 @@ def seed_database():
         ]
         db.session.add_all(powers)
 
-        # Commit heroes and powers to get IDs
+
         db.session.commit()
 
-        # Seed HeroPowers
+
         hero_powers = [
-            HeroPower(strength="Strong", hero_id=1, power_id=2),  # Ms. Marvel with flight
-            HeroPower(strength="Average", hero_id=3, power_id=1),  # Spider-Gwen with super strength
-            HeroPower(strength="Weak", hero_id=5, power_id=4)      # Scarlet Witch with elasticity
+            HeroPower(strength="Strong", hero_id=1, power_id=2),
+            HeroPower(strength="Average", hero_id=3, power_id=1),
+            HeroPower(strength="Weak", hero_id=5, power_id=4)
         ]
         db.session.add_all(hero_powers)
 
-        # Commit all changes
+
         db.session.commit()
         print("Database seeded successfully!")
 

@@ -61,9 +61,9 @@ def init_routes(app):
                 db.session.add(hero_power)
                 db.session.commit()
 
-                # Send email notification (assumed requirement for Flask-Mail)
+                # Send email notification 
                 send_email(
-                    'hero@example.com',  # Replace with actual recipient
+                    'yusufmim2001@gmail.com',  
                     'New HeroPower Created',
                     f'Hero {hero.super_name} assigned power {power.name} with strength {hero_power.strength}'
                 )

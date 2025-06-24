@@ -22,7 +22,7 @@ This is a Flask-based RESTful API for managing superheroes, their powers, and th
   - `PATCH /powers/:id`: Update a power’s description.
   - `POST /hero_powers`: Create a new hero-power association with email notification.
 - **Email Notification**: Sends an email when a new `HeroPower` is created (using Flask-Mail).
-- **Error Handling**: Returns appropriate HTTP status codes (200, 201, 400, 404) with JSON error messages.
+
 - **Serialization**: Uses `sqlalchemy_serializer` to control JSON output and prevent recursive loops.
 
 ## Setup Instructions

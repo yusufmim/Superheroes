@@ -1,7 +1,7 @@
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy_serializer import SerializerMixin
 
-db = SQLAlchemy()
+from app import db
 
 class Hero(db.Model, SerializerMixin):
     __tablename__ = 'heroes'
